@@ -1,0 +1,32 @@
+{
+  "properties": {
+    "platform": {
+      "enabled": true
+    },
+    "globalValidation": {
+      "requireAuthentication": true,
+      "unauthenticatedClientAction": "RedirectToLoginPage",
+      "redirectToProvider": "AzureActiveDirectory"
+    },
+    "login": {
+      "tokenStore": {
+        "enabled": true
+      }
+    },
+    "identityProviders": {
+      "azureActiveDirectory": {
+        "enabled": true,
+        "registration": {
+          "openIdIssuer": "https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0",
+          "clientId": "YOUR_CLIENT_ID",
+          "clientSecretSettingName": "AAD_CLIENT_SECRET"
+        },
+        "login": {
+          "loginParameters": [
+            "domain_hint=YOUR_DOMAIN.onmicrosoft.com"
+          ]
+        }
+      }
+    }
+  }
+}

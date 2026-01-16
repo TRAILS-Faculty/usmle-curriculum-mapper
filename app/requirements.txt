@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+pdfplumber
+python-docx
+openpyxl
+sentence-transformers
+scikit-learn
+faiss-cpu
+nltk
